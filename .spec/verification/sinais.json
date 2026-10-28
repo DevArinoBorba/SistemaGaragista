@@ -1,0 +1,707 @@
+{
+  "schema": 1,
+  "sinais": {
+    "ARQUIVO_INEXISTENTE::catalogo-loja::T-001": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "catalogo-loja",
+      "ref": "T-001",
+      "ocorrencias": 5,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::catalogo-loja::T-002": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "catalogo-loja",
+      "ref": "T-002",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::catalogo-loja::T-003": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "catalogo-loja",
+      "ref": "T-003",
+      "ocorrencias": 5,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::catalogo-loja::T-004": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "catalogo-loja",
+      "ref": "T-004",
+      "ocorrencias": 8,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::catalogo-loja::T-005": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "catalogo-loja",
+      "ref": "T-005",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-001": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-001",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-002": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-002",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-003": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-003",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-004": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-004",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-005": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-005",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-006": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-006",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-007": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-007",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-008": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-008",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-009": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-009",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::catalogo-loja::AC-010": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "catalogo-loja",
+      "ref": "AC-010",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/favicon.ico": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/favicon.ico",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/db/index.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/db/index.ts",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/lib/env-schema.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/lib/env-schema.ts",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/lib/env.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/lib/env.ts",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/lib/logger.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/lib/logger.ts",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/lib/utils.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/lib/utils.ts",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "GLOB_SEM_ARQUIVOS::—::P-002": {
+      "codigo": "GLOB_SEM_ARQUIVOS",
+      "feature": "—",
+      "ref": "P-002",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T14:39:09.139Z",
+      "ultimaVez": "2026-10-16T14:39:09.139Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-001": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-002": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-003": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-003",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-004": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-004",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-005": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-005",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-006": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-006",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-007": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-007",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-008": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-008",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-009": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-009",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.699Z",
+      "gitRev": null
+    },
+    "AC_SEM_PROVA::catalogo-loja::AC-010": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "catalogo-loja",
+      "ref": "AC-010",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:41:54.700Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/(protected)/layout.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/(protected)/layout.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/(protected)/veiculos/[id]/editar/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/(protected)/veiculos/[id]/editar/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/(protected)/veiculos/loading.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/(protected)/veiculos/loading.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/(protected)/veiculos/novo/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/(protected)/veiculos/novo/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/(protected)/veiculos/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/(protected)/veiculos/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/login/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/login/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/admin/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/admin/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/api/auth/[...all]/route.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/api/auth/[...all]/route.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/api/photos/[vehicleId]/[name]/route.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/api/photos/[vehicleId]/[name]/route.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/error.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/error.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/not-found.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/not-found.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/veiculos/[id]/page.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/veiculos/[id]/page.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/admin/delete-vehicle.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/admin/delete-vehicle.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/admin/login-form.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/admin/login-form.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/admin/logout-button.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/admin/logout-button.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/admin/vehicle-form.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/admin/vehicle-form.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/pagination.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/pagination.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/site-header.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/site-header.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/vehicles/vehicle-card.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/vehicles/vehicle-card.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/db/schema/auth.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/db/schema/auth.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/db/schema/vehicles.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/db/schema/vehicles.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/features/auth/auth.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/auth/auth.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/features/auth/session.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/auth/session.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/features/uploads/storage.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/uploads/storage.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-16T21:36:20.133Z",
+      "ultimaVez": "2026-10-16T21:36:20.133Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::identidade-loja::T-006": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "identidade-loja",
+      "ref": "T-006",
+      "ocorrencias": 5,
+      "primeiraVez": "2026-10-26T14:46:35.656Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::identidade-loja::T-007": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "identidade-loja",
+      "ref": "T-007",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "ARQUIVO_INEXISTENTE::identidade-loja::T-008": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "identidade-loja",
+      "ref": "T-008",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::identidade-loja::AC-011": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "identidade-loja",
+      "ref": "AC-011",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::identidade-loja::AC-013": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "identidade-loja",
+      "ref": "AC-013",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::identidade-loja::AC-012": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "identidade-loja",
+      "ref": "AC-012",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "AC_SEM_TESTE::identidade-loja::AC-014": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "identidade-loja",
+      "ref": "AC-014",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T14:46:35.657Z",
+      "ultimaVez": "2026-10-26T14:46:35.657Z",
+      "gitRev": null
+    },
+    "VERIFY_OBSOLETO::catalogo-loja::—": {
+      "codigo": "VERIFY_OBSOLETO",
+      "feature": "catalogo-loja",
+      "ref": "—",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-26T15:10:02.986Z",
+      "ultimaVez": "2026-10-28T13:40:12.825Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-001": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-001",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-002": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-002",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-003": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-003",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-004": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-004",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-006": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-006",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-008": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-008",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "VERIFY_PULADO::catalogo-loja::AC-009": {
+      "codigo": "VERIFY_PULADO",
+      "feature": "catalogo-loja",
+      "ref": "AC-009",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T17:57:30.324Z",
+      "ultimaVez": "2026-10-26T17:57:30.324Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/robots.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/robots.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T18:30:20.777Z",
+      "ultimaVez": "2026-10-26T18:30:20.777Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/sitemap.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/sitemap.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-26T18:30:20.778Z",
+      "ultimaVez": "2026-10-26T18:30:20.778Z",
+      "gitRev": null
+    },
+    "VERIFY_OBSOLETO::identidade-loja::—": {
+      "codigo": "VERIFY_OBSOLETO",
+      "feature": "identidade-loja",
+      "ref": "—",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-28T13:40:12.826Z",
+      "ultimaVez": "2026-10-28T13:40:12.826Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/app/api/admin/backup.json/route.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/app/api/admin/backup.json/route.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-28T13:40:12.826Z",
+      "ultimaVez": "2026-10-28T13:40:12.826Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/icons.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/icons.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-28T13:40:12.826Z",
+      "ultimaVez": "2026-10-28T13:40:12.826Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/vehicles/vehicle-carousel.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/vehicles/vehicle-carousel.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-28T13:40:12.826Z",
+      "ultimaVez": "2026-10-28T13:40:12.826Z",
+      "gitRev": null
+    },
+    "ARQUIVO_ORFAO::—::src/components/vehicles/vehicle-gallery.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/components/vehicles/vehicle-gallery.tsx",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-28T13:40:12.826Z",
+      "ultimaVez": "2026-10-28T13:40:12.826Z",
+      "gitRev": null
+    }
+  }
+}

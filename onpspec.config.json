@@ -1,0 +1,15 @@
+{
+  "testCommand": "pnpm exec vitest run --config vitest.integration.config.mts --reporter=json --outputFile=.local/qa/vitest-report.json",
+  "reporter": "vitest-json",
+  "reporterOutputFile": ".local/qa/vitest-report.json",
+  "testGlobs": [
+    "test/**",
+    "tests/**",
+    "src/**/*.test.*",
+    "src/**/*.spec.*",
+    "__tests__/**"
+  ],
+  "srcGlobs": [
+    "src/**"
+  ]
+}

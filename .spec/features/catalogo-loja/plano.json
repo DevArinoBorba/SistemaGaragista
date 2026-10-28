@@ -1,0 +1,149 @@
+{
+  "runId": "SistemaGaragista-catalogo-loja-mvb2ppbw",
+  "feature": "catalogo-loja",
+  "agent": "codex",
+  "modo": "sequencial",
+  "paralelizar": null,
+  "modeloForcado": "gpt-6.1-sol",
+  "esforcoForcado": "medium",
+  "geradoEm": "2026-10-16 14:39",
+  "branchTrabalho": "spec/catalogo-loja",
+  "baseDir": ".spec/features/catalogo-loja",
+  "specDir": ".spec",
+  "repoName": "SistemaGaragista",
+  "logsDir": "../onp-worktrees/SistemaGaragista-catalogo-loja-logs",
+  "ondas": [],
+  "faixas": [],
+  "sequenciais": [
+    {
+      "id": "T-001",
+      "titulo": "Dados e validação de veículos",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium",
+      "arquivos": [
+        "src/db/schema/index.ts",
+        "src/features/vehicles/schema.ts",
+        "src/features/vehicles/validation.test.ts",
+        "src/features/vehicles/repository.ts",
+        "src/features/vehicles/repository.test.ts",
+        "drizzle/",
+        "docs/architecture.md"
+      ],
+      "refs": [
+        "US-003",
+        "AC-006",
+        "AC-007",
+        "AC-008",
+        "AC-009"
+      ]
+    },
+    {
+      "id": "T-002",
+      "titulo": "Acesso administrativo e autorização",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium",
+      "arquivos": [
+        "src/db/schema/index.ts",
+        "src/features/auth/",
+        "src/app/admin/login/",
+        "src/app/api/auth/",
+        "scripts/create-admin.ts",
+        ".env.example",
+        "package.json",
+        "pnpm-lock.yaml",
+        "docs/architecture.md"
+      ],
+      "refs": [
+        "US-002",
+        "AC-004",
+        "AC-005"
+      ]
+    },
+    {
+      "id": "T-003",
+      "titulo": "Catálogo público e detalhe do anúncio",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium",
+      "arquivos": [
+        "src/app/page.tsx",
+        "src/app/veiculos/",
+        "src/app/layout.tsx",
+        "src/app/globals.css",
+        "src/features/vehicles/public.ts",
+        "src/features/vehicles/public.test.ts",
+        "src/components/vehicles/",
+        "docs/design.md",
+        "docs/architecture.md"
+      ],
+      "refs": [
+        "US-001",
+        "AC-001",
+        "AC-002",
+        "AC-003"
+      ]
+    },
+    {
+      "id": "T-004",
+      "titulo": "Painel de estoque, formulários e fotos",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium",
+      "arquivos": [
+        "src/app/admin/veiculos/",
+        "src/app/admin/layout.tsx",
+        "src/features/vehicles/actions.ts",
+        "src/features/vehicles/actions.test.ts",
+        "src/features/uploads/",
+        "src/app/api/photos/",
+        "src/app/globals.css",
+        "docs/design.md",
+        "docs/architecture.md"
+      ],
+      "refs": [
+        "US-003",
+        "AC-005",
+        "AC-006",
+        "AC-007",
+        "AC-008",
+        "AC-009",
+        "AC-010"
+      ]
+    },
+    {
+      "id": "T-005",
+      "titulo": "Integração, navegador e documentação",
+      "modelo": "gpt-6.1-sol",
+      "esforco": "medium",
+      "arquivos": [
+        "tests/",
+        "src/features/vehicles/integration.test.ts",
+        "package.json",
+        "pnpm-lock.yaml",
+        "vitest.config.mts",
+        "onpspec.config.json",
+        "PRODUCT.md",
+        "README.md",
+        "docs/architecture.md",
+        "docs/onboarding.md",
+        "docs/quality.md",
+        "docs/setup.md"
+      ],
+      "refs": [
+        "US-001",
+        "US-002",
+        "US-003",
+        "AC-001",
+        "AC-002",
+        "AC-003",
+        "AC-004",
+        "AC-005",
+        "AC-006",
+        "AC-007",
+        "AC-008",
+        "AC-009",
+        "AC-010"
+      ]
+    }
+  ],
+  "concluidas": [],
+  "avisos": []
+}

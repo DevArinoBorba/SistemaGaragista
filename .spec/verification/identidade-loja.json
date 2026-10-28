@@ -1,0 +1,32 @@
+{
+  "feature": "identidade-loja",
+  "timestamp": "2026-10-28T13:43:39.432Z",
+  "gitRev": null,
+  "command": "pnpm exec vitest run --config vitest.integration.config.mts --reporter=json --outputFile=.local/qa/vitest-report.json",
+  "reporter": "vitest-json",
+  "exitCode": 0,
+  "testsParsed": 31,
+  "results": {
+    "AC-011": {
+      "status": "pass",
+      "testName": "@spec:AC-011 @spec:AC-012 painel salva identidade, CNPJ, imagens e contatos da loja e exibe WhatsApp no anúncio @spec:AC-011 @spec:AC-012 painel salva identidade, CNPJ, imagens e contatos da loja e exibe WhatsApp no anúncio",
+      "method": "vitest-json"
+    },
+    "AC-013": {
+      "status": "pass",
+      "testName": "@spec:AC-013 painel da loja rejeita dados inválidos e chamadas sem sessão @spec:AC-013 painel da loja rejeita dados inválidos e chamadas sem sessão",
+      "method": "vitest-json"
+    },
+    "AC-012": {
+      "status": "pass",
+      "testName": "@spec:AC-011 @spec:AC-012 painel salva identidade, CNPJ, imagens e contatos da loja e exibe WhatsApp no anúncio @spec:AC-011 @spec:AC-012 painel salva identidade, CNPJ, imagens e contatos da loja e exibe WhatsApp no anúncio",
+      "method": "vitest-json"
+    },
+    "AC-014": {
+      "status": "pass",
+      "testName": "@spec:AC-014 catálogo e anúncio mantêm identidade padrão sem contatos fictícios @spec:AC-014 catálogo e anúncio mantêm identidade padrão sem contatos fictícios",
+      "method": "vitest-json"
+    }
+  },
+  "principles": {}
+}

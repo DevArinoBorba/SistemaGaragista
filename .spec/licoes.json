@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "proximoId": 4,
+  "licoes": [
+    {
+      "id": "L-001",
+      "texto": "Alinhar o nome real do arquivo de migration gerado pelo drizzle-kit na lista de arquivos da tarefa em tasks.md antes do gate final.",
+      "chave": "ARQUIVO_INEXISTENTE::alinhar o nome real do arquivo de migration gerado pelo drizzle kit na lista de arquivos da tarefa em tasks md antes do gate final",
+      "sinal": "ARQUIVO_INEXISTENTE",
+      "escopo": null,
+      "status": "candidata",
+      "recorrencia": 1,
+      "features": [
+        "identidade-loja"
+      ],
+      "evidencias": [
+        {
+          "fonte": "T-006",
+          "feature": "identidade-loja",
+          "quando": "2026-10-26T15:11:18.104Z",
+          "gitRev": null
+        }
+      ],
+      "penalidades": 0,
+      "criadaEm": "2026-10-26T15:11:18.104Z",
+      "ultimaVez": "2026-10-26T15:11:18.104Z"
+    },
+    {
+      "id": "L-002",
+      "texto": "Anotar cada novo critério de aceite com @spec:AC-xxx tanto em testes unitários de fronteira quanto no fluxo integrado E2E.",
+      "chave": "AC_SEM_TESTE::anotar cada novo criterio de aceite com spec ac xxx tanto em testes unitarios de fronteira quanto no fluxo integrado e2e",
+      "sinal": "AC_SEM_TESTE",
+      "escopo": null,
+      "status": "candidata",
+      "recorrencia": 1,
+      "features": [
+        "identidade-loja"
+      ],
+      "evidencias": [
+        {
+          "fonte": "AC-011",
+          "feature": "identidade-loja",
+          "quando": "2026-10-26T15:11:18.236Z",
+          "gitRev": null
+        }
+      ],
+      "penalidades": 0,
+      "criadaEm": "2026-10-26T15:11:18.236Z",
+      "ultimaVez": "2026-10-26T15:11:18.236Z"
+    },
+    {
+      "id": "L-003",
+      "texto": "Sempre que um ciclo de revisao ou melhoria adicionar um novo arquivo em src/ (como sitemap.ts ou robots.ts), mapeie-o imediatamente na tarefa correspondente em .spec/features/*/tasks.md antes de rodar onp-spec audit --ci.",
+      "chave": "ARQUIVO_ORFAO::sempre que um ciclo de revisao ou melhoria adicionar um novo arquivo em src como sitemap ts ou robots ts mapeie o imediatamente na tarefa correspondente em spec features tasks md antes de rodar onp spec audit ci",
+      "sinal": "ARQUIVO_ORFAO",
+      "escopo": null,
+      "status": "candidata",
+      "recorrencia": 1,
+      "features": [
+        "identidade-loja"
+      ],
+      "evidencias": [
+        {
+          "fonte": "src/app/sitemap.ts",
+          "feature": "identidade-loja",
+          "quando": "2026-10-26T18:31:31.594Z",
+          "gitRev": null
+        }
+      ],
+      "penalidades": 0,
+      "criadaEm": "2026-10-26T18:31:31.594Z",
+      "ultimaVez": "2026-10-26T18:31:31.594Z"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "runId": "SistemaGaragista-identidade-loja-mvpdi7bm",
+  "feature": "identidade-loja",
+  "agent": "antigravity",
+  "modo": "paralelo",
+  "paralelizar": null,
+  "modeloForcado": null,
+  "esforcoForcado": null,
+  "geradoEm": "2026-10-26 14:50",
+  "branchTrabalho": "spec/identidade-loja",
+  "baseDir": ".spec/features/identidade-loja",
+  "specDir": ".spec",
+  "repoName": "SistemaGaragista",
+  "logsDir": "../onp-worktrees/SistemaGaragista-identidade-loja-logs",
+  "ondas": [
+    [
+      "faixa-1",
+      "faixa-2",
+      "faixa-3"
+    ]
+  ],
+  "faixas": [
+    {
+      "id": "faixa-1",
+      "branch": "spec/identidade-loja-faixa-1",
+      "worktree": "../onp-worktrees/SistemaGaragista-identidade-loja-faixa-1",
+      "tarefas": [
+        {
+          "id": "T-006",
+          "titulo": "Schema, migration e repositório de configuração da loja",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/db/schema/store.ts",
+            "src/db/schema/index.ts",
+            "src/features/store/schema.ts",
+            "src/features/store/validation.test.ts",
+            "src/features/store/repository.ts",
+            "drizzle/0001_store_settings.sql"
+          ],
+          "refs": [
+            "US-004",
+            "AC-011",
+            "AC-013",
+            "AC-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-2",
+      "branch": "spec/identidade-loja-faixa-2",
+      "worktree": "../onp-worktrees/SistemaGaragista-identidade-loja-faixa-2",
+      "tarefas": [
+        {
+          "id": "T-007",
+          "titulo": "Server Action protegida, upload de imagens da loja e painel `/admin/loja`",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/store/actions.ts",
+            "src/features/store/actions.test.ts",
+            "src/components/admin/store-form.tsx",
+            "src/app/admin/(protected)/loja/page.tsx",
+            "src/app/admin/(protected)/layout.tsx",
+            "src/app/api/store/[name]/route.ts"
+          ],
+          "refs": [
+            "US-004",
+            "AC-011",
+            "AC-013"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-3",
+      "branch": "spec/identidade-loja-faixa-3",
+      "worktree": "../onp-worktrees/SistemaGaragista-identidade-loja-faixa-3",
+      "tarefas": [
+        {
+          "id": "T-008",
+          "titulo": "Identidade pública, CNPJ, imagens e canais no catálogo, rodapé e anúncio",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/site-header.tsx",
+            "src/components/site-footer.tsx",
+            "src/app/page.tsx",
+            "src/app/veiculos/[id]/page.tsx",
+            "src/app/globals.css",
+            "tests/catalogo-loja.test.ts",
+            "PRODUCT.md",
+            "docs/architecture.md",
+            "docs/setup.md",
+            "docs/quality.md"
+          ],
+          "refs": [
+            "US-005",
+            "AC-011",
+            "AC-012",
+            "AC-014"
+          ]
+        }
+      ]
+    }
+  ],
+  "sequenciais": [],
+  "concluidas": [],
+  "avisos": []
+}
