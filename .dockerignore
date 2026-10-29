@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.local
+.env*
+!.env.example
+.vitest
+.codex
+.agents
+.spec
+.taste-skill
+graft
+graphify-out
+tests
+*.tsbuildinfo

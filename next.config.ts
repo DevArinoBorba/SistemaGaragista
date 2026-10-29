@@ -14,6 +14,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Container builds (Dockerfile) opt in; local Windows builds keep the default output.
+  ...(process.env.NEXT_OUTPUT === "standalone" ? { output: "standalone" as const } : {}),
   experimental: { serverActions: { bodySizeLimit: "24mb" } },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
