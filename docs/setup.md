@@ -89,3 +89,14 @@ O grafo fica em `graphify-out/graph.json`, ignorado pelo Git. Extração AST é 
 ## Continuação
 
 Para operar localmente, rode `pnpm db:local` em um terminal e `pnpm dev` em outro (detalhes em [onboarding.md](onboarding.md)). Antes de publicar em produção, definir identidade comercial definitiva da loja, banco PostgreSQL gerenciado, armazenamento durável de fotos e domínio HTTPS. Os 3 ciclos de revisão de qualidade foram executados e documentados em [quality.md](quality.md), onde constam também os próximos 3 ciclos sugeridos.
+
+## Produção (Coolify)
+
+Publicado em https://garagista.oriumdigital.tech, no Coolify da VPS `orium-vps` (projeto `Garagista`, ambiente `production`). Outros projetos da VPS não foram alterados.
+
+- Aplicação `garagista`: build pelo `Dockerfile` a partir da `main` pública do GitHub, saída `standalone` (`NEXT_OUTPUT=standalone` só no container), porta interna 3000, HTTPS via Traefik/Let's Encrypt.
+- Banco `garagista-postgres` (PostgreSQL 17, sem porta pública). Fotos no volume persistente `garagista-uploads`, montado em `/app/.local/uploads`.
+- Variáveis de runtime no Coolify: `DATABASE_URL`, `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `LOG_LEVEL`. Cópia privada em `.local/production.env`; token da API em `.local/coolify-token`; credenciais do admin de produção em `.local/first-access.production.json`. Nada disso vai ao Git.
+- Migrações: revise o SQL gerado e aplique com `drizzle-kit migrate` por túnel SSH até o IP interno do container do banco (porta local escolhida pelo `Find-FreePort.ps1`). O deploy não migra automaticamente.
+- Novo deploy: push na `main` e acionar *Deploy* no Coolify (ou `POST /api/v1/applications/<uuid>/start`).
+- `@embedded-postgres/linux-x64` está bloqueado em `allowBuilds`: é só o banco de desenvolvimento e não roda na imagem.
