@@ -44,8 +44,11 @@ export async function listVehicles(publishedOnly = true, page = 1, query = "", p
     .limit(safePageSize + 1);
 }
 export async function getStockSummary() {
-  const rows = await getDb().select({ status: vehicles.status, total: count() }).from(vehicles).groupBy(vehicles.status);
-  const summary = { total: 0, published: 0, draft: 0, sold: 0 };
+  const [rows, [featuredRow]] = await Promise.all([
+    getDb().select({ status: vehicles.status, total: count() }).from(vehicles).groupBy(vehicles.status),
+    getDb().select({ total: count() }).from(vehicles).where(eq(vehicles.featured, true)),
+  ]);
+  const summary = { total: 0, published: 0, draft: 0, sold: 0, featured: Number(featuredRow?.total ?? 0) };
   for (const row of rows) {
     summary[row.status] = Number(row.total);
     summary.total += Number(row.total);

@@ -45,5 +45,15 @@ describe("Store identity and contact validation", () => {
     expect(decodeURIComponent(url)).toContain("Volkswagen Polo 2022/2023");
     expect(buildMapUrl("")).toBe("");
     expect(buildMapUrl("Av. Paulista, 1000 - São Paulo/SP")).toContain("https://www.google.com/maps/search/?api=1&query=");
+    const socialParsed = storeInputSchema.parse({
+      name: "Orium Veículos",
+      instagramUrl: "instagram.com/oriumveiculos",
+      youtubeUrl: "https://youtube.com/@oriumveiculos",
+    });
+    expect(socialParsed.instagramUrl).toBe("https://instagram.com/oriumveiculos");
+    expect(socialParsed.youtubeUrl).toBe("https://youtube.com/@oriumveiculos");
+    expect(socialParsed.facebookUrl).toBe("");
+    expect(socialParsed.tiktokUrl).toBe("");
+    expect(storeInputSchema.safeParse({ name: "Orium", instagramUrl: "javascript:alert(1)" }).success).toBe(false);
   });
 });

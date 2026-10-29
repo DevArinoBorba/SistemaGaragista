@@ -25,11 +25,12 @@ export function VehicleCarousel({ id, title, description, size = "feature", auto
     const track = trackRef.current;
     if (!track) return;
     const items = Array.from(track.children) as HTMLElement[];
-    const origin = track.getBoundingClientRect().left + parseFloat(getComputedStyle(track).scrollPaddingLeft || "0");
+    const firstOffset = items[0]?.offsetLeft ?? 0;
     let nearest = 0;
     let distance = Infinity;
     items.forEach((item, index) => {
-      const gap = Math.abs(item.getBoundingClientRect().left - origin);
+      const snapLeft = item.offsetLeft - firstOffset;
+      const gap = Math.abs(snapLeft - track.scrollLeft);
       if (gap < distance) {
         distance = gap;
         nearest = index;
@@ -59,22 +60,23 @@ export function VehicleCarousel({ id, title, description, size = "feature", auto
     const track = trackRef.current;
     if (!track || !slides.length) return;
     const clamped = Math.min(Math.max(index, 0), slides.length - 1);
+    const first = track.children[0] as HTMLElement | undefined;
     const target = track.children[clamped] as HTMLElement | undefined;
-    if (!target) return;
+    if (!first || !target) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const offset = target.getBoundingClientRect().left - track.getBoundingClientRect().left - parseFloat(getComputedStyle(track).scrollPaddingLeft || "0");
-    track.scrollBy({ left: offset, behavior: reduce ? "auto" : "smooth" });
+    const left = target.offsetLeft - first.offsetLeft;
+    track.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
   }, [slides.length]);
 
   useEffect(() => {
     if (!autoPlayMs || slides.length <= 1 || paused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(() => {
       const track = trackRef.current;
       if (!track) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
       if (atEnd || active >= slides.length - 1) {
-        track.scrollTo({ left: 0, behavior: "smooth" });
+        track.scrollTo({ left: 0, behavior: reduce ? "auto" : "smooth" });
       } else {
         goToSlide(active + 1);
       }
@@ -92,10 +94,12 @@ export function VehicleCarousel({ id, title, description, size = "feature", auto
       className={`carousel carousel-${size}`}
       aria-labelledby={titleId}
       aria-roledescription="carrossel"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
-      onBlurCapture={() => setPaused(false)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setPaused(false);
+        }
+      }}
     >
       <div className="carousel-head">
         <div>

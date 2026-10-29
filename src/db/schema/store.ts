@@ -13,6 +13,10 @@ export const storeSettings = pgTable("store_settings", {
   openingHours: text("opening_hours").notNull().default(""),
   logoPhoto: text("logo_photo").notNull().default(""),
   heroPhoto: text("hero_photo").notNull().default(""),
+  instagramUrl: text("instagram_url").notNull().default(""),
+  facebookUrl: text("facebook_url").notNull().default(""),
+  youtubeUrl: text("youtube_url").notNull().default(""),
+  tiktokUrl: text("tiktok_url").notNull().default(""),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
 }, (t) => [
   check("store_settings_singleton", sql`${t.id} = 'default'`),

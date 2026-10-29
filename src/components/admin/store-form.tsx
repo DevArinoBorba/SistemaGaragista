@@ -90,6 +90,29 @@ export function StoreForm({ store }: { store: StoreSettings }) {
       </fieldset>
 
       <fieldset disabled={pending}>
+        <legend>Redes sociais</legend>
+        <p>Preencha apenas as redes que deseja exibir no rodapé do site.</p>
+        <div className="form-grid">
+          {field("instagramUrl", "Instagram", "url", store.instagramUrl, false, {
+            maxLength: 255,
+            placeholder: "https://instagram.com/sualoja",
+          })}
+          {field("youtubeUrl", "YouTube", "url", store.youtubeUrl, false, {
+            maxLength: 255,
+            placeholder: "https://youtube.com/@sualoja",
+          })}
+          {field("tiktokUrl", "TikTok", "url", store.tiktokUrl, false, {
+            maxLength: 255,
+            placeholder: "https://tiktok.com/@sualoja",
+          })}
+          {field("facebookUrl", "Facebook", "url", store.facebookUrl, false, {
+            maxLength: 255,
+            placeholder: "https://facebook.com/sualoja",
+          })}
+        </div>
+      </fieldset>
+
+      <fieldset disabled={pending}>
         <legend>Imagens da loja</legend>
         <p>Envie imagens JPEG, PNG ou WebP de até 8 MB cada.</p>
         <div className="form-grid">

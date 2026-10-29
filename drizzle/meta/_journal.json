@@ -22,6 +22,13 @@
       "when": 1793201277736,
       "tag": "0002_last_hemingway",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1793283845340,
+      "tag": "0003_complex_white_tiger",
+      "breakpoints": true
     }
   ]
 }

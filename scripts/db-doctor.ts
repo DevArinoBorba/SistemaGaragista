@@ -36,6 +36,10 @@ async function main() {
           email: current.email,
           address: current.address,
           openingHours: current.openingHours,
+          instagramUrl: current.instagramUrl,
+          facebookUrl: current.facebookUrl,
+          youtubeUrl: current.youtubeUrl,
+          tiktokUrl: current.tiktokUrl,
         },
         { logoPhoto: newLogo, heroPhoto: current.heroPhoto },
       );

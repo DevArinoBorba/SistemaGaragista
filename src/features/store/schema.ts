@@ -13,10 +13,40 @@ export const defaultStoreSettings: StoreSettings = {
   openingHours: "",
   logoPhoto: "",
   heroPhoto: "",
+  instagramUrl: "",
+  facebookUrl: "",
+  youtubeUrl: "",
+  tiktokUrl: "",
   updatedAt: new Date(0),
 };
 
 const digitsOnly = (value: string) => value.replace(/\D/g, "");
+
+const normalizeSocialUrl = (value: string) => {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed.replace(/^\/+/, "")}`;
+};
+
+const isValidSocialUrl = (value: string) => {
+  if (!value) return true;
+  try {
+    const parsed = new URL(value);
+    return (parsed.protocol === "http:" || parsed.protocol === "https:") && parsed.hostname.includes(".");
+  } catch {
+    return false;
+  }
+};
+
+const socialUrlField = (network: string) =>
+  z
+    .string()
+    .trim()
+    .max(255, "Use até 255 caracteres.")
+    .default("")
+    .transform(normalizeSocialUrl)
+    .refine(isValidSocialUrl, `Informe um link válido do ${network}.`);
 
 export function isValidCnpj(value: string) {
   const digits = digitsOnly(value);
@@ -43,6 +73,10 @@ export const storeInputSchema = z.object({
   email: z.string().trim().max(254, "Use até 254 caracteres.").default("").refine((val) => val === "" || z.email().safeParse(val).success, "Informe um e-mail válido."),
   address: z.string().trim().max(240, "Use até 240 caracteres.").default(""),
   openingHours: z.string().trim().max(160, "Use até 160 caracteres.").default(""),
+  instagramUrl: socialUrlField("Instagram"),
+  facebookUrl: socialUrlField("Facebook"),
+  youtubeUrl: socialUrlField("YouTube"),
+  tiktokUrl: socialUrlField("TikTok"),
 });
 
 export type StoreInput = z.infer<typeof storeInputSchema>;
@@ -76,4 +110,10 @@ export function buildMapUrl(address: string) {
   const trimmed = address.trim();
   if (!trimmed) return "";
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(trimmed)}`;
+}
+
+export function buildMapEmbedUrl(address: string) {
+  const trimmed = address.trim();
+  if (!trimmed) return "";
+  return `https://maps.google.com/maps?q=${encodeURIComponent(trimmed)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 }

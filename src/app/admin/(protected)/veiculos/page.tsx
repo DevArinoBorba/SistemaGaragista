@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { requireAdminPage } from "@/features/auth/session";
 import { duplicateVehicleAction, toggleVehicleFeaturedAction, updateVehicleStatusAction } from "@/features/vehicles/actions";
@@ -21,19 +22,29 @@ export default async function StockPage({ searchParams }: PageProps<"/admin/veic
   const hasFilters = Boolean(query || status || fuel || transmission || sort !== "recentes");
   return (
     <>
-      <div className="admin-title"><div><h1>Seu estoque</h1><p>Cadastre, publique e mantenha seus anúncios em dia.</p></div><div className="row-actions"><a className="button secondary" href="/api/admin/estoque.csv">Exportar CSV</a><Link className="button primary" href="/admin/veiculos/novo">Adicionar veículo <span aria-hidden="true">+</span></Link></div></div>
+      <div className="admin-title">
+        <div>
+          <h1>Seu estoque</h1>
+          <p>Cadastre, publique, destaque e mantenha seus anúncios em dia.</p>
+        </div>
+        <div className="row-actions">
+          <a className="button secondary" href="/api/admin/estoque.csv">Exportar CSV</a>
+          <Link className="button primary" href="/admin/veiculos/novo">Adicionar veículo <span aria-hidden="true">+</span></Link>
+        </div>
+      </div>
       {params.salvo && <p className="success-message" role="status">Veículo salvo com sucesso.</p>}
       {params.removido && <p className="success-message" role="status">Veículo removido do estoque.</p>}
       <dl className="stock-summary" aria-label="Resumo do estoque">
-        <div><dt>Total</dt><dd>{summary.total}</dd></div>
-        <div><dt>Publicados</dt><dd>{summary.published}</dd></div>
-        <div><dt>Rascunhos</dt><dd>{summary.draft}</dd></div>
-        <div><dt>Vendidos</dt><dd>{summary.sold}</dd></div>
+        <div className="kpi-card"><dt>Total no estoque</dt><dd>{summary.total}</dd></div>
+        <div className="kpi-card kpi-published"><dt>Publicados</dt><dd>{summary.published}</dd></div>
+        <div className="kpi-card kpi-featured"><dt>Em destaque</dt><dd>{summary.featured}</dd></div>
+        <div className="kpi-card"><dt>Rascunhos</dt><dd>{summary.draft}</dd></div>
+        <div className="kpi-card"><dt>Vendidos</dt><dd>{summary.sold}</dd></div>
       </dl>
-      <form className="search-form" action="/admin/veiculos" role="search">
+      <form className="search-form admin-filter-card" action="/admin/veiculos" role="search">
         <label htmlFor="admin-search">Filtrar estoque</label>
         <div className="filter-row">
-          <input id="admin-search" name="q" type="search" placeholder="Marca, modelo ou versão" defaultValue={query} maxLength={100} />
+          <input id="admin-search" name="q" type="search" placeholder="Marca, modelo ou versão..." defaultValue={query} maxLength={100} />
           <select name="status" aria-label="Situação" defaultValue={status ?? ""}>
             <option value="">Todas as situações</option>
             {vehicleStatuses.map((item) => <option key={item} value={item}>{statusLabels[item]}</option>)}
@@ -51,17 +62,39 @@ export default async function StockPage({ searchParams }: PageProps<"/admin/veic
             <option value="menor-preco">Menor preço</option>
             <option value="menor-km">Menor quilometragem</option>
           </select>
-          <button className="button secondary" type="submit">Filtrar</button>
-          {hasFilters && <Link className="text-link" href="/admin/veiculos">Limpar filtros</Link>}
+          <button className="button primary" type="submit">Filtrar</button>
+          {hasFilters && <Link className="button secondary" href="/admin/veiculos">Limpar filtros</Link>}
         </div>
       </form>
       <p className="stock-count">{vehicles.length} {vehicles.length === 1 ? "veículo cadastrado" : "veículos cadastrados"}{hasNext || page > 1 ? " nesta página" : ""}</p>
       {vehicles.length ? (
         <div className="stock-list">
           {vehicles.map((vehicle) => (
-            <article className="stock-row" key={vehicle.id}>
-              <div><h2><Link href={`/admin/veiculos/${vehicle.id}/editar`}>{vehicle.brand} {vehicle.model}</Link></h2><p>{vehicle.modelYear} · {formatMileage(vehicle.mileage)} · {vehicle.version || vehicle.fuel}</p></div>
-              <strong>{formatPrice(vehicle.priceCents)}</strong>
+            <article className={vehicle.featured ? "stock-row stock-row-featured" : "stock-row"} key={vehicle.id}>
+              <div className="stock-row-main">
+                <Link href={`/admin/veiculos/${vehicle.id}/editar`} className="stock-thumb" tabIndex={-1} aria-hidden="true">
+                  {vehicle.photos[0] ? (
+                    <Image
+                      className="stock-thumb-img"
+                      src={`/api/photos/${vehicle.id}/${vehicle.photos[0]}`}
+                      alt=""
+                      width={104}
+                      height={70}
+                      unoptimized
+                    />
+                  ) : (
+                    <span className="stock-thumb-empty">Sem foto</span>
+                  )}
+                  {vehicle.photos.length > 0 && (
+                    <span className="stock-thumb-count">{vehicle.photos.length}</span>
+                  )}
+                </Link>
+                <div className="stock-row-info">
+                  <h2><Link href={`/admin/veiculos/${vehicle.id}/editar`}>{vehicle.brand} {vehicle.model}</Link></h2>
+                  <p>{vehicle.manufactureYear}/{vehicle.modelYear} · {formatMileage(vehicle.mileage)} · {vehicle.transmission} · {vehicle.version || vehicle.fuel}</p>
+                </div>
+              </div>
+              <strong className="stock-row-price">{formatPrice(vehicle.priceCents)}</strong>
               <span className={`status status-${vehicle.status}`}>{statusLabels[vehicle.status]}</span>
               <div className="row-actions">
                 <form action={toggleVehicleFeaturedAction}>
