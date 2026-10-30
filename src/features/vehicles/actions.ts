@@ -107,6 +107,8 @@ export async function duplicateVehicleAction(form: FormData) {
         modelYear: existing.modelYear,
         mileage: existing.mileage,
         price: existing.priceCents,
+        marketPrice: existing.marketPriceCents ?? 0,
+        fipePrice: existing.fipePriceCents ?? 0,
         fuel: existing.fuel as (typeof fuels)[number],
         transmission: existing.transmission as (typeof transmissions)[number],
         color: existing.color,

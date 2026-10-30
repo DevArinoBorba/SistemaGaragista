@@ -29,6 +29,13 @@
       "when": 1793283845340,
       "tag": "0003_complex_white_tiger",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1793371122004,
+      "tag": "0004_ordinary_komodo",
+      "breakpoints": true
     }
   ]
 }

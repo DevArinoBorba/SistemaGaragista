@@ -53,6 +53,7 @@ export function SiteFooter({ store = defaultStoreSettings }: { store?: StoreSett
           <ul className="footer-nav-list">
             <li><Link href="/">Início</Link></li>
             <li><Link href="/#estoque">Estoque</Link></li>
+            <li><Link href="/venda-seu-veiculo">Venda seu Veículo</Link></li>
             <li><Link href="/financiamento">Financiamento</Link></li>
             <li><Link href="/contato">Contato</Link></li>
           </ul>

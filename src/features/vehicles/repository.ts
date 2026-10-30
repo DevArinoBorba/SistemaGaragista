@@ -62,8 +62,8 @@ export async function findVehicle(id: string, publishedOnly = true) {
 }
 export async function saveVehicle(input: VehicleInput, photos: string[], id?: string, expectedPhotos?: string[]) {
   if (id !== undefined && !z.uuid().safeParse(id).success) return null;
-  const { price, ...fields } = input;
-  const data = { ...fields, priceCents: price, photos, updatedAt: new Date() };
+  const { price, marketPrice = 0, fipePrice = 0, ...fields } = input;
+  const data = { ...fields, priceCents: price, marketPriceCents: marketPrice, fipePriceCents: fipePrice, photos, updatedAt: new Date() };
   const db = getDb();
   const rows = id
     ? await db.update(vehicles).set(data).where(and(eq(vehicles.id, id), expectedPhotos ? eq(vehicles.photos, expectedPhotos) : undefined)).returning()

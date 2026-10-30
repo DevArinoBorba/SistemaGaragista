@@ -11,6 +11,8 @@ export const vehicles = pgTable("vehicles", {
   modelYear: integer("model_year").notNull(),
   mileage: integer("mileage").notNull(),
   priceCents: integer("price_cents").notNull(),
+  marketPriceCents: integer("market_price_cents").notNull().default(0),
+  fipePriceCents: integer("fipe_price_cents").notNull().default(0),
   fuel: text("fuel").notNull(),
   transmission: text("transmission").notNull(),
   color: text("color").notNull(),
@@ -23,6 +25,8 @@ export const vehicles = pgTable("vehicles", {
 }, (t) => [
   index("vehicles_public_created_idx").on(t.createdAt).where(sql`${t.status} = 'published'`),
   check("vehicles_price_valid", sql`${t.priceCents} >= 0`),
+  check("vehicles_market_price_valid", sql`${t.marketPriceCents} >= 0`),
+  check("vehicles_fipe_price_valid", sql`${t.fipePriceCents} >= 0`),
   check("vehicles_mileage_valid", sql`${t.mileage} >= 0`),
   check("vehicles_years_valid", sql`${t.manufactureYear} BETWEEN 1886 AND 2200 AND ${t.modelYear} BETWEEN ${t.manufactureYear} AND ${t.manufactureYear} + 1`),
   check("vehicles_names_valid", sql`length(trim(${t.brand})) > 0 AND length(trim(${t.model})) > 0`),

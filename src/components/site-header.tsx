@@ -52,6 +52,7 @@ export function SiteHeader({ store = defaultStoreSettings }: { store?: StoreSett
         </Link>
         <nav aria-label="Navegação principal">
           <Link className="nav-link" href="/#estoque">Estoque</Link>
+          <Link className="nav-link" href="/venda-seu-veiculo">Venda seu Veículo</Link>
           <Link className="nav-link" href="/financiamento">Financiamento</Link>
           <Link className="nav-link" href="/contato">Contato</Link>
           {store.whatsapp && (

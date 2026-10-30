@@ -108,6 +108,22 @@ export function VehicleForm({ vehicle }: { vehicle?: Vehicle }) {
           {field("modelYear", "Ano-modelo", "number", vehicle?.modelYear, true, { min: 1886, max: new Date().getFullYear() + 1 })}
           {field("mileage", "Quilometragem (km)", "number", vehicle?.mileage ?? 0, true, { min: 0, max: 9999999, step: 1 })}
           {field("price", "Preço (R$)", "text", vehicle ? priceToInput(vehicle.priceCents) : "", true, { inputMode: "decimal", placeholder: "Ex.: 75900,00", maxLength: 12 })}
+          {field(
+            "marketPrice",
+            "Preço médio Webmotors (R$)",
+            "text",
+            vehicle && vehicle.marketPriceCents > 0 ? priceToInput(vehicle.marketPriceCents) : "",
+            false,
+            { inputMode: "decimal", placeholder: "Ex.: 78500,00", maxLength: 12 },
+          )}
+          {field(
+            "fipePrice",
+            "Preço Tabela FIPE (R$)",
+            "text",
+            vehicle && vehicle.fipePriceCents > 0 ? priceToInput(vehicle.fipePriceCents) : "",
+            false,
+            { inputMode: "decimal", placeholder: "Ex.: 79200,00", maxLength: 12 },
+          )}
           <div className="field">
             <label htmlFor="fuel">Combustível</label>
             <select

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeftIcon, ClockIcon, MailIcon, PhoneIcon, PinIcon, ShieldIcon, WhatsAppIcon } from "@/components/icons";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { PriceComparisonCard } from "@/components/vehicles/price-comparison-card";
 import { VehicleCard } from "@/components/vehicles/vehicle-card";
 import { VehicleCarousel } from "@/components/vehicles/vehicle-carousel";
 import { VehicleGallery } from "@/components/vehicles/vehicle-gallery";
@@ -77,6 +78,7 @@ export default async function VehiclePage({ params }: PageProps<"/veiculos/[id]"
                 <h2 id="about-title">Sobre o veículo</h2>
                 <p className="description">{vehicle.description || "Nenhuma informação adicional foi adicionada."}</p>
               </section>
+              <PriceComparisonCard vehicle={vehicle} />
             </div>
             <aside className="spec-sheet" aria-labelledby="spec-title">
               <strong className="detail-price">{formatPrice(vehicle.priceCents)}</strong>

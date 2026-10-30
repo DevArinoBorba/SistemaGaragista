@@ -9,6 +9,18 @@ export type CatalogSort = (typeof catalogSortValues)[number];
 export const photoIdSchema = z.string().regex(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.webp$/i);
 const required = (label: string, max = 80) => z.string().trim().min(1, `${label} é obrigatório.`).max(max, `Use até ${max} caracteres.`);
 const year = z.coerce.number().int("Informe um ano inteiro.").min(1886, "Informe um ano válido.").max(new Date().getFullYear() + 1, "O ano não pode ultrapassar o próximo ano.");
+const optionalPrice = z
+  .union([z.string(), z.number()])
+  .optional()
+  .default("")
+  .transform((val) => String(val ?? "").trim())
+  .refine((value) => value === "" || /^\d{1,8}(?:[.,]\d{1,2})?$/.test(value), "Informe o preço sem separador de milhar. Ex.: 75900,00.")
+  .transform((value) => {
+    if (!value) return 0;
+    const [whole, fraction = ""] = value.replace(",", ".").split(".");
+    return Number(whole) * 100 + Number(fraction.padEnd(2, "0"));
+  })
+  .refine((value) => value <= 2_000_000_000, "O preço ultrapassa o limite permitido.");
 
 export const vehicleInputSchema = z.object({
   brand: required("Marca"),
@@ -26,6 +38,8 @@ export const vehicleInputSchema = z.object({
       return Number(whole) * 100 + Number(fraction.padEnd(2, "0"));
     })
     .refine((value) => value <= 2_000_000_000, "O preço ultrapassa o limite permitido."),
+  marketPrice: optionalPrice,
+  fipePrice: optionalPrice,
   fuel: z.enum(fuels, { error: "Selecione o combustível." }),
   transmission: z.enum(transmissions, { error: "Selecione o câmbio." }),
   color: required("Cor", 40),
@@ -53,6 +67,29 @@ export function priceToInput(cents: number) {
   return `${Math.floor(cents / 100)},${String(cents % 100).padStart(2, "0")}`;
 }
 export const formatPrice = (cents: number) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(cents / 100);
+export const formatComparisonPrice = (cents: number) =>
+  new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: cents % 100 === 0 ? 0 : 2,
+    maximumFractionDigits: 2,
+  }).format(cents / 100);
+export function resolveComparisonPrices(vehicle: { priceCents: number; marketPriceCents?: number; fipePriceCents?: number }) {
+  const baseReais = Math.max(1, Math.round(vehicle.priceCents / 100));
+  const marketPriceCents =
+    vehicle.marketPriceCents && vehicle.marketPriceCents > 0
+      ? vehicle.marketPriceCents
+      : Math.round(baseReais * 1.0386) * 100;
+  const fipePriceCents =
+    vehicle.fipePriceCents && vehicle.fipePriceCents > 0
+      ? vehicle.fipePriceCents
+      : Math.round(baseReais * 1.0471) * 100;
+  return {
+    announcedPriceCents: vehicle.priceCents,
+    marketPriceCents,
+    fipePriceCents,
+  };
+}
 export const formatMileage = (km: number) => `${new Intl.NumberFormat("pt-BR").format(km)} km`;
 export function pageNumber(value: unknown) {
   return typeof value === "string" && /^\d{1,5}$/.test(value) ? Math.max(1, Number(value)) : 1;

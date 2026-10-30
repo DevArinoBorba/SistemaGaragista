@@ -269,6 +269,20 @@ svg { flex-shrink: 0; }
 .detail-about { max-width: 70ch; margin-top: 64px; }
 .detail-about h2 { font-size: clamp(28px, 2.6vw, 38px); }
 .description { margin: 0; color: var(--text-soft); line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+.price-compare-card { margin-top: 40px; padding: 34px 40px; border: 1px solid var(--line); border-radius: 12px; background: #26252d; color: #f5f5f7; box-shadow: 0 18px 40px rgb(0 0 0 / .28); }
+.price-compare-title { margin: 0 0 32px; font-family: var(--font-sans); font-size: 14.5px; font-weight: 500; letter-spacing: .01em; color: #e2e1ea; }
+.price-compare-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.price-compare-col { min-width: 0; }
+.price-compare-header { display: flex; align-items: center; min-height: 28px; margin-bottom: 14px; }
+.price-compare-label { font-size: 14px; font-weight: 500; color: #dcdbe4; }
+.price-compare-wm-badge { display: inline-flex; align-items: center; gap: 8px; }
+.price-compare-wm-icon { width: 24px; height: 24px; flex-shrink: 0; }
+.price-compare-wm-text { font-family: var(--font-sans); font-size: 17px; font-weight: 700; letter-spacing: -.02em; color: #ffffff; line-height: 1; }
+.price-compare-fipe { font-family: var(--font-sans); font-size: 22px; font-weight: 700; letter-spacing: -.03em; color: #ffffff; line-height: 1; }
+.price-compare-value { display: block; font-family: var(--font-sans); font-size: clamp(24px, 2.4vw, 32px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: #ffffff; font-variant-numeric: lining-nums tabular-nums; }
+.price-compare-sub { margin: 10px 0 0; font-size: 12.5px; line-height: 1.45; color: #d0cfd8; }
+.price-compare-footer { margin: 36px 0 0; font-size: 13.5px; line-height: 1.5; color: #dcdbe4; }
+.price-compare-footer strong { font-weight: 700; color: #ffffff; }
 .spec-sheet { position: sticky; top: calc(var(--header-h) + 24px); padding: 32px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .detail-price { display: block; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: clamp(34px, 3.2vw, 46px); font-weight: 400; line-height: 1.05; font-variant-numeric: lining-nums tabular-nums; }
 .spec-sheet h2 { margin: 0 0 6px; font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -315,6 +329,17 @@ svg { flex-shrink: 0; }
 .financing-card { padding: 36px 32px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
 .financing-card h3 { margin: 0 0 24px; font-size: 26px; }
 .financing-form { display: grid; gap: 20px; }
+.sell-section-label { display: block; margin-bottom: 6px; color: var(--muted); font-size: 13px; }
+.sell-modality-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.sell-modality-option { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 14px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); cursor: pointer; text-align: center; transition: border-color .2s, background-color .2s; }
+.sell-modality-option input { position: absolute; opacity: 0; pointer-events: none; }
+.sell-modality-option strong { font-size: 13.5px; font-weight: 600; color: var(--text); }
+.sell-modality-option span { font-size: 11.5px; color: var(--muted); }
+.sell-modality-option:hover { border-color: var(--line-strong); }
+.sell-modality-option.is-active { border-color: var(--accent); background: rgb(179 102 255 / .14); box-shadow: inset 0 0 0 1px rgb(179 102 255 / .35); }
+.sell-modality-option.is-active strong { color: var(--accent-strong); }
+.sell-subhead { margin: 8px 0 -4px; padding-top: 16px; border-top: 1px solid var(--line); font-family: var(--font-sans); font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-strong); }
+.sell-fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .financing-submit { width: 100%; height: 52px; font-weight: 600; }
 .financing-feedback { margin: 0; padding: 12px 16px; border: 1px solid rgb(179 102 255 / .4); border-radius: 8px; background: var(--success-bg); color: var(--text); font-size: 14px; }
 .financing-quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding-top: 8px; border-top: 1px solid var(--line); }
@@ -529,6 +554,10 @@ dialog h2 { font-size: 28px; }
   .spec-sheet { padding: 24px; }
   .gallery-arrow { width: 40px; height: 40px; }
   .detail-about { margin-top: 48px; }
+  .price-compare-card { margin-top: 32px; padding: 24px 22px; }
+  .price-compare-grid { grid-template-columns: 1fr; gap: 22px; }
+  .price-compare-footer { margin-top: 24px; }
+  .sell-modality-grid, .sell-fields-grid { grid-template-columns: 1fr; }
   .admin-main { padding: 36px 20px 64px; }
   .admin-title { flex-direction: column; align-items: flex-start; margin-bottom: 28px; }
   .stock-row { grid-template-columns: 1fr; gap: 14px; padding: 20px; }
