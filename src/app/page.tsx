@@ -17,9 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = store.tagline ? `${store.name} — ${store.tagline}` : store.name;
   const description = store.tagline || `Estoque de veículos publicados por ${store.name}.`;
   const image = store.heroPhoto ? `/api/store/${store.heroPhoto}` : store.logoPhoto ? `/api/store/${store.logoPhoto}` : undefined;
+  const icon = store.logoPhoto ? `/api/store/${store.logoPhoto}` : undefined;
   return {
     title,
     description,
+    icons: icon ? { icon, shortcut: icon, apple: icon } : undefined,
     openGraph: { title, description, type: "website", images: image ? [image] : undefined },
   };
 }
