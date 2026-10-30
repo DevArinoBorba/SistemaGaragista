@@ -217,7 +217,7 @@ export default async function ContactPage() {
                         <WhatsAppIcon /> Agendar Visita pelo WhatsApp
                       </a>
                     )}
-                    <Link href="/#estoque" className="button secondary">
+                    <Link href="/" className="button secondary">
                       Ver Veículos Disponíveis
                     </Link>
                   </div>

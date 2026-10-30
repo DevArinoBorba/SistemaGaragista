@@ -173,7 +173,7 @@ export default async function SellVehiclePage() {
                 >
                   {store.whatsapp && <WhatsAppIcon />} Avaliar pelo WhatsApp
                 </a>
-                <Link href="/#estoque" className="button secondary">
+                <Link href="/" className="button secondary">
                   Ver Estoque para Troca
                 </Link>
               </div>

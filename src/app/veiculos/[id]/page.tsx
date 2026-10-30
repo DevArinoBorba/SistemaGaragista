@@ -64,7 +64,7 @@ export default async function VehiclePage({ params }: PageProps<"/veiculos/[id]"
       <main id="conteudo" className="detail-page">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: vehicleLd }} />
         <div className="detail-shell">
-          <Link href="/#estoque" className="back-link"><ArrowLeftIcon /> Voltar ao estoque</Link>
+          <Link href="/" className="back-link"><ArrowLeftIcon /> Voltar ao estoque</Link>
           <div className="detail-heading">
             <div>
               <h1>{title}</h1>

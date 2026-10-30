@@ -48,7 +48,7 @@
 
 /* Base */
 * { box-sizing: border-box; }
-html { background: var(--ground); scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); scrollbar-color: #362f47 var(--ground); }
+html { background: var(--ground); scroll-padding-top: calc(var(--header-h) + 16px); scrollbar-color: #362f47 var(--ground); }
 body { margin: 0; background: var(--ground); color: var(--text); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--accent); color: var(--on-accent); }
 a { color: inherit; text-decoration: none; }

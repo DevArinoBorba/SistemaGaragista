@@ -173,7 +173,7 @@ export default async function FinancingPage() {
                 >
                   {store.whatsapp && <WhatsAppIcon />} Falar com Especialista
                 </a>
-                <Link href="/#estoque" className="button secondary">
+                <Link href="/" className="button secondary">
                   Ver Estoque
                 </Link>
               </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { StoreSettings } from "@/db/schema/store";
 import { buildWhatsAppUrl, defaultStoreSettings } from "@/features/store/schema";
@@ -10,7 +11,14 @@ import { WhatsAppIcon } from "@/components/icons";
 let splashPlayedInSession = false;
 
 export function SiteHeader({ store = defaultStoreSettings }: { store?: StoreSettings }) {
+  const pathname = usePathname();
   const [showSplash, setShowSplash] = useState(() => !splashPlayedInSession);
+
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (splashPlayedInSession) return;
@@ -51,7 +59,15 @@ export function SiteHeader({ store = defaultStoreSettings }: { store?: StoreSett
           )}
         </Link>
         <nav aria-label="Navegação principal">
-          <Link className="nav-link" href="/#estoque">Estoque</Link>
+          <Link
+            className="nav-link"
+            href="/"
+            onClick={() => {
+              if (pathname === "/") window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+          >
+            Estoque
+          </Link>
           <Link className="nav-link" href="/venda-seu-veiculo">Venda seu Veículo</Link>
           <Link className="nav-link" href="/financiamento">Financiamento</Link>
           <Link className="nav-link" href="/contato">Contato</Link>
